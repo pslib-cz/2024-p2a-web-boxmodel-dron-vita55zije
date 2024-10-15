@@ -37,10 +37,58 @@
 
 /* VRSTVA PRO VAŠE STYLY */
 @layer design {
+    /*Header*/
+
    .image-responsive {
     display: block;
-    width: 100%;
-    
+    width: 100%; /*height: 100% = default*/
    }
 
+   .page__header {
+    background-image: url(../images/header-2560w.webp);
+    background-size: cover;
+    background-position: left top;
+    padding: 1em;
+   }
+
+   .page__logo {
+    display: inline-block;
+    padding: 1em;
+   }
+
+   .page__logo-container {
+    text-align: center;
+   }
+
+   .page__intro {
+    color: var(--light, white); /*pokud není definovaná barva - light -> bude white*/
+   }
+
+   .button {
+    display: inline-block;
+    background-color: var(--primary, teal);
+    color: var(--light, white);
+    border-radius: 0.5em;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: .4s all;
+   }
+
+   .button:hover {
+    background-color: var(--light, white);
+    color: var(--black, black);
+   }
+
+   @media (prefers-color-scheme: light) {
+    .button--light {
+        background-color: var(--light, white);
+        color: var(--text, black);
+       }
+    
+       .button--light:hover {
+        background-color: var(--black, black);
+        color: var(--light, white);
+       }
+   }
 }
